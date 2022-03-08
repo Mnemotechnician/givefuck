@@ -10,7 +10,7 @@ var progress = 0
 val progressSymbols = arrayOf('─', '╲', '│', '╱')
 
 fun main(vararg args: String) {
-	if (args.size.let { it < 1 || it > 2} || args[0].toIntOrNull() == null || args.getOrNull(1)?.let { it.toIntOrNull() == null } ?: false) {
+	if (args.size.let { it < 1 || it > 2} || args[0].toLongOrNull() == null || args.getOrNull(1)?.let { it.toLongOrNull() == null } ?: false) {
 		println("""
 			Usage:
 			- givefuck TARGET GIVEN — give [given] out of [target] fucks
@@ -19,8 +19,8 @@ fun main(vararg args: String) {
 		return;
 	}
 	
-	val maxFucks = max(args[0].toInt(), 1)
-	val givenFucks = (args.getOrNull(1)?.toInt() ?: maxFucks).coerceIn(0, maxFucks)
+	val maxFucks = max(args[0].toLong(), 1)
+	val givenFucks = (args.getOrNull(1)?.toLong() ?: maxFucks).coerceIn(0L, maxFucks)
 	
 	boxprint("Giving a fuck, please stand by...")
 	MILLISECONDS.sleep(750)
@@ -28,7 +28,7 @@ fun main(vararg args: String) {
 	var endAt = System.currentTimeMillis() + fuckTime
 	
 	while(System.currentTimeMillis() < endAt) {
-		val fucks = if (givenFucks == 0) 0 else (fuckTime - (endAt - System.currentTimeMillis())) / (fuckTime / (givenFucks + 1))
+		val fucks = if (givenFucks == 0L) 0L else (fuckTime - (endAt - System.currentTimeMillis())) * (givenFucks + 1L) / fuckTime
 		
 		undoBox()
 		boxprint("Giving a fuck ($fucks/$maxFucks)... ${nextProgressSymbol()}")
@@ -36,7 +36,7 @@ fun main(vararg args: String) {
 	}
 	
 	val finalMessage = when {
-		givenFucks == 0 -> "No fucks were given! (0/$maxFucks)"
+		givenFucks == 0L -> "No fucks were given! (0/$maxFucks)"
 		givenFucks == maxFucks -> "All $maxFucks fucks were given! ($maxFucks/$maxFucks)"
 		else -> "$givenFucks out of $maxFucks fucks were given! ($givenFucks/$maxFucks)"
 	}

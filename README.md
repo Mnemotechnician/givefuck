@@ -8,17 +8,16 @@ A small terminal application that allows you to give fucks
 
 `givefuck maxFucks givenFucks` — give `givenFucks` out of `maxFucks` fucks
 
-# Installing
-## automatically
+# Installing automatically
 
-run the following script:
+run the following script (if it doesn't work, run it as superuser):
 ```sh
 wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/tools/install.sh
 bash install.sh
 rm install.sh
 ```
 
-## manually
+# Installing manually
 - Clone this repo
 - Open the repo dir and run `bash ./gradlew publish`
 - Copy the output file (`app/build/libs/givefuck`) to `/usr/bin/`

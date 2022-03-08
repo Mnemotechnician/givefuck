@@ -36,7 +36,7 @@ fun main(vararg args: String) {
 	}
 	
 	val finalMessage = when {
-		givenFucks == 0 -> "No fucks were given! (0/1)"
+		givenFucks == 0 -> "No fucks were given! (0/$maxFucks)"
 		givenFucks == maxFucks -> "All $maxFucks fucks were given! ($maxFucks/$maxFucks)"
 		else -> "$givenFucks out of $maxFucks fucks were given! ($givenFucks/$maxFucks)"
 	}

@@ -19,4 +19,4 @@ cp $artifactPath $path
 chmod +x $path
 
 echo "installed successfully, removing the temp directory"
-rm -r ~/.tmp/givefuck
+rm -rf ~/.tmp/givefuck

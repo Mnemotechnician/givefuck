@@ -13,7 +13,9 @@ A small terminal application that allows you to give fucks
 
 run the following script:
 ```sh
-wget -nv -O - https://github.com/mnemotehnician/givefuck/blob/master/tools/install.sh | bash -
+wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/tools/install.sh
+bash install.sh
+rm install.sh
 ```
 
 ## manually

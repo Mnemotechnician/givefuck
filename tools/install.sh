@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 
 cd ~/.tmp/
+rm -rf givefuck
 git clone --depth 1 https://github.com/mnemotechnician/givefuck
 cd givefuck
 
-bash ./gradlew publish
+bash ./gradlew --console verbose publish
 
 artifactPath=./app/build/libs/givefuck
 
@@ -13,7 +14,7 @@ artifactPath=./app/build/libs/givefuck
 pathes=$( echo $PATH | tr ":" "\n" )
 path=${pathes[0]}/givefuck
 
-echo copying executable into $path
+echo "copying the executable into $path"
 cp $artifactPath $path
 chmod +x $path
 

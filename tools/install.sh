@@ -17,7 +17,7 @@ path=${pathes[0]}
 
 echo "copying the executable into $path"
 mkdir -p $path
-cp $artifactPath $path/givefuck
+cp $artifactPath $path/
 chmod +x $path/givefuck
 
 echo "installed successfully, removing the temp directory"

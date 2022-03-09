@@ -12,12 +12,11 @@ artifactPath=./app/build/libs/givefuck
 #install our application into the first applicable path
 
 pathes=$( echo $PATH | tr ":" "\n" )
-path=${pathes[0]}
+path=${pathes[0]}/givefuck
 
 echo "copying the executable into $path"
-mkdir -p $path
-cp $artifactPath $path/givefuck
-chmod +x $path/givefuck
+cp $artifactPath $path
+chmod +x $path
 
 echo "installed successfully, removing the temp directory"
-rm -rf ~/.tmp/givefuck
+rm -r ~/.tmp/givefuck

@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+mkdir -p ~/.tmp
 cd ~/.tmp/
 rm -rf givefuck
 git clone --depth 1 https://github.com/mnemotechnician/givefuck

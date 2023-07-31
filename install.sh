@@ -10,12 +10,12 @@ bash ./gradlew --console verbose publish
 
 artifactPath=./app/build/libs/givefuck
 
-path=~/.local/bin/
-mkdir -p $path
+epath=~/.local/bin/
+mkdir -p $epath
 
-echo "copying the executable into $path."
-cp $artifactPath $path
-chmod +x $path/givefuck
+echo "copying the executable into $epath."
+cp $artifactPath $epath
+chmod +x $epath/givefuck
 
 echo "installed successfully, removing the temp directory"
 rm -r ~/.tmp/givefuck

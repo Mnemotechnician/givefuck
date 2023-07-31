@@ -14,10 +14,10 @@ epath=~/.local/bin/
 mkdir -p $epath
 
 echo "copying the executable into $epath."
-cp $artifactPath $epath
+cp -f $artifactPath $epath
 chmod +x $epath/givefuck
 
 echo "installed successfully, removing the temp directory"
-rm -r ~/.tmp/givefuck
+rm -rf ~/.tmp/givefuck
 
 echo "Make sure ~/.local/bin is in your \$PATH. If not, add it there or specify the full path to run this program."

@@ -12,7 +12,7 @@ A small terminal application that allows you to give fucks
 
 run the following script:
 ```sh
-wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/tools/install.sh -O - | bash
+wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/install.sh -O - | bash
 ```
 
 # Installing manually

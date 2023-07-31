@@ -14,7 +14,7 @@ path=~/.local/bin/
 mkdir -p $path
 
 echo "copying the executable into $path."
-sudo cp $artifactPath $path
+cp $artifactPath $path
 chmod +x $path/givefuck
 
 echo "installed successfully, removing the temp directory"

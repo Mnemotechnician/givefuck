@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+mkdir -p ~/.tmp/
 cd ~/.tmp/
 rm -rf givefuck
 git clone --depth 1 https://github.com/mnemotechnician/givefuck
@@ -9,14 +10,14 @@ bash ./gradlew --console verbose publish
 
 artifactPath=./app/build/libs/givefuck
 
-#install our application into the first applicable path
+path=~/.local/bin/
+mkdir -p $path
 
-pathes=$( echo $PATH | tr ":" "\n" )
-path=${pathes[0]}/givefuck
-
-echo "copying the executable into $path"
-cp $artifactPath $path
-chmod +x $path
+echo "copying the executable into $path."
+sudo cp $artifactPath $path
+chmod +x $path/givefuck
 
 echo "installed successfully, removing the temp directory"
 rm -r ~/.tmp/givefuck
+
+echo "Make sure ~/.local/bin is in your \$PATH. If not, add it there or specify the full path to run this program."

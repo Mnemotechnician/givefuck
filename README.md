@@ -10,11 +10,9 @@ A small terminal application that allows you to give fucks
 
 # Installing automatically
 
-run the following script (if it doesn't work, run it as superuser):
+run the following script:
 ```sh
-wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/tools/install.sh
-bash install.sh
-rm install.sh
+wget https://raw.githubusercontent.com/Mnemotechnician/givefuck/master/tools/install.sh -O - | bash
 ```
 
 # Installing manually
